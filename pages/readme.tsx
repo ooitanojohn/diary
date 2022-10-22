@@ -2,10 +2,10 @@ import Head from 'next/head'
 import Image from 'next/image'
 import Header from '../components/header'
 import Footer from '../components/footer'
-import { GetStaticProps, GetStaticPaths } from 'next'
+import { GetStaticProps } from 'next'
 import { getGitProfileData } from '../lib/git'
 
-export default function Readme({ profile } : {
+export default function Readme({ profile }: {
   profile: {
     login: string
     bio: string

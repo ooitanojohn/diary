@@ -30,39 +30,18 @@ export async function getAllGitRepoData() { // 公開リポジトリ一覧取得
     per_page: 100,
     sort:'created'
   })
-  // console.log(typeof repositories)
-  interface repositories{
-    data: {
-      name: string
-      description:string
-      html_url:string
-      created_at: string
-      updated_at: string
-      pushed_at: string
-    }
-  }
+  // console.log(typeof repositories)w
   return repositories
 }
 
-export async function getPageGitRepoData(page) { // 公開リポジトリpage取得
+export async function getPageGitRepoData(page:string) { // 公開リポジトリpage取得
   const repositories = await octokit.request('GET /user/repos', {
     visibility: 'public',
     affiliation: 'owner',
     per_page: 5,
-    page:page,
+    page:Number(page),
     sort:'created'
   })
-
-  // console.log(typeof repositories)
-  interface repositories{
-    data: {
-      name: string
-      description:string
-      html_url:string
-      created_at: string
-      updated_at: string
-      pushed_at: string
-    }
-  }
+  // 返り値に型情報が含まれていると思うので再定義いらない
   return repositories
 }

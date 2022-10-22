@@ -2,10 +2,9 @@
 import Link from 'next/link';
 import styles from './pagination.module.css'
 
-export const Pagination = ({ totalCount,DIR }) => {
+export const Pagination = ({ totalCount, DIR }: {totalCount:number,DIR:string}) => {
   const PER_PAGE = 5;
-
-  const range = (start, end) =>
+  const range = (start:number, end:number ) =>
         [...Array(end - start + 1)].map((_, i) => start + i)
 
   return (

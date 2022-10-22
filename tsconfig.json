@@ -1,21 +1,24 @@
-{
+{ // コンパイルに関するオプションを設定
   "compilerOptions": {
-    "target": "es5",
-    "lib": [
+    "target": "es6", // ECMAScript target versionを指定
+    "lib": [ // ビルドする際に含めるlibraryファイル
       "dom",
       "dom.iterable",
       "esnext"
     ],
-    "allowJs": true,
-    "skipLibCheck": true,
-    "strict": false,
-    "forceConsistentCasingInFileNames": true,
-    "noEmit": true,
-    "incremental": true,
-    "esModuleInterop": true,
-    "module": "esnext",
-    "resolveJsonModule": true,
+    "allowJs": true, //JSファイルのビルドを可能に
+    "noImplicitAny": true, //暗黙のany型をエラーに
+    "skipLibCheck": true, //型宣言ファイルの型チェックをスキップする
+    "allowSyntheticDefaultImports": true, //エキスポートしないモジュールからのインポートを許可するか（型チェックのみに影響）
+    "strict": true, //厳密な型チェックオプションを有効に
+    "forceConsistentCasingInFileNames": true, //大文字小文字を区別して参照を解決するようにする
+    "noEmit": true, //各々のファイルを別のモジュールとして変換
     "isolatedModules": true,
+    "incremental": true,
+    "esModuleInterop": true, // CommonJSモジュールとESモジュール間の相互運用性を,すべてのインポート用に名前空間オブジェクトを作成することで可能に
+    "module": "esnext", //生成されるモジュールコードを指定
+    "moduleResolution": "node", //モジュール解決戦略を指定する: 'node'（Node.js）または 'classic'
+    "resolveJsonModule": true, //自分で型定義を行う必要なく json ファイルを扱うことを可能に
     "jsx": "preserve"
   },
   "include": [

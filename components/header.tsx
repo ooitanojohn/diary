@@ -13,8 +13,6 @@ function Header() {
           <li><Link href="/repos/1"><a>repos</a></Link></li>
         </ul>
       </nav>
-      <h1>ooitanojohn</h1>
-      <p><Image src="/images/profile.jpg" alt="top画像" width={100} height={100} /></p>
     </header>
   )
 }

@@ -1,9 +1,9 @@
 import Head from 'next/head'
 import Link from 'next/link'
 import Header from '../components/header'
-import Footer from '../components/footer'
+import Footer from "../components/footer"
 import { getSortedPostsData } from '../lib/md' // md解析
-import { GetStaticProps, GetStaticPaths } from 'next'
+import { GetStaticProps } from 'next'
 
 export default function Index({ allPostsData }:{
   allPostsData: {

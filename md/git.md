@@ -1,5 +1,5 @@
 ---
-title: 'issue'
+title: 'github git-flow'
 date: '2022-06-07'
 description:
 tag: file
@@ -30,3 +30,7 @@ author: You
 
 - [revert](https://qiita.com/chihiro/items/2fa827d0eac98109e7ee)
 - [merge 取り消し](https://qiita.com/chihiro/items/5dd671aa6f1c332986a7)
+
+## [amend オプション](https://backlog.com/ja/git-tutorial/stepup/22/)
+
+- --amend オプションを指定してコミットを行うと、同じブランチの直前のコミットに対して内容を追加やコメントの修正をすることができます。

@@ -50,6 +50,7 @@ const allPostsData = fileNames.map((fileName) => {
 // 記事のhead一覧情報をobjectとして返す関数
 export function getAllPostIds() {
   const fileNames = fs.readdirSync(postsDirectory)
+
   return fileNames.map(fileName => {
     return {
       params: {
@@ -60,7 +61,7 @@ export function getAllPostIds() {
 }
 
 // mdの内容を
-export async function getPostData(id) {
+export async function getPostData(id:string) {
   const fullPath = path.join(postsDirectory, `${id}.md`)
   const fileContents = fs.readFileSync(fullPath, 'utf8')
 

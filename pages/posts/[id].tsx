@@ -1,13 +1,14 @@
 import Head from 'next/head'
 import Header from '../../components/header'
 import PostLayout from '../../components/postLayout'
-import Footer from '../../components/footer'
+import Footer from "../../components/footer"
 import { getAllPostIds, getPostData } from '../../lib/md'
-import { GetStaticProps, GetStaticPaths } from 'next'
+import { GetStaticProps, GetStaticPaths, NextPage } from 'next'
 
-export default function Post({
-  postData
-}: {
+type PathParams = { //PathParamの型情報
+  id:string
+}
+type PageProps =  { // Propsの型情報
     postData: {
     title: string
     date: string
@@ -15,7 +16,26 @@ export default function Post({
     tag: string
     contentHtml: string
     }
-}) { // 記事用レイアウト
+}
+export const getStaticPaths: GetStaticPaths<PathParams> = async () => { // mdから読み取った idとしてとりうる値のリストを返す
+  const paths = getAllPostIds()
+  return {
+    paths,
+    fallback: false
+  }
+}
+export const getStaticProps:GetStaticProps<PageProps> = async context  => {
+
+  const {id} = context.params as PathParams // StaticPropsの返り値 context.param.idを取得
+  const postData = await getPostData(id) // params.id を使用して、ブログの投稿に必要なデータを取得
+  return {
+    props: { postData }
+  }
+}
+
+const Post: NextPage<PageProps> = ({ // 記事用レイアウト
+  postData
+}) => {
   return (
     <>
       {/* {console.log(postData)} */}
@@ -38,21 +58,4 @@ export default function Post({
   )
 }
 
-export const getStaticPaths: GetStaticPaths = async () => { // mdから読み取った idとしてとりうる値のリストを返す
-  const paths = getAllPostIds()
-  console.log(paths)
-  return {
-    paths,
-    fallback: false
-  }
-}
-
-export const getStaticProps: GetStaticProps = async ({ params }) => {
-  // params.id を使用して、ブログの投稿に必要なデータを取得する
-  const postData = await getPostData(params.id as string)
-  return {
-    props: {
-      postData
-    }
-  }
-}
+export default Post
