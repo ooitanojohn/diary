@@ -1,5 +1,6 @@
-# like
+# techBlog
 
-- shell (bash)
-- PHP
-- next.js
+- 気をつけること
+  - 参照元
+  - 著作権
+  -

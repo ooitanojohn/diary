@@ -4,6 +4,7 @@ import Header from '../components/header'
 import Footer from '../components/footer'
 import { GetStaticProps } from 'next'
 import { getGitProfileData } from '../lib/git'
+import handImg from '../public/images/womanraisinghand.png'
 
 export default function Readme({ profile }: {
   profile: {
@@ -22,12 +23,17 @@ export default function Readme({ profile }: {
       </Head>
       <Header></Header>
       <main>
-        <h1>Profile</h1>
+        <h2>Profile</h2>
            <ul>
-            <li>GitHub {profile.created_at} ~ {profile.updated_at}</li>
-            <li>my name is {profile.login}</li>
+            <li><span className="tag">Hi!♡</span><Image src={handImg} alt="hande_icon" height={32} width={32}></Image>
+my name is {profile.login}</li>
+            <li>I&apos;m Learning started {profile.created_at} ~ {profile.updated_at}</li>
+
             <li>{profile.bio}</li>
             <li><p><Image src={profile.avatar_url} alt="github_avater" height={100} width={100}></Image></p></li>
+            <li><span className="tag">tech:</span>Valila.developer</li>
+            <li><span className="tag">techlike:</span>PHP,next.js,bash</li>
+            <li><span className="tag">hobby:</span>cute,music(keyboard),art</li>
           </ul>
       </main>
       <Footer></Footer>

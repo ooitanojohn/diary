@@ -1,4 +1,16 @@
 .container {
-  margin: 0 auto;
   /*  border: 1px solid grey;*/
+  padding-bottom: 20px;
+}
+.footerMsg {
+  font-style: italic;
+  font-weight: 500;
+  font-family: serif;
+  padding-bottom: 10px;
+}
+.address {
+  font-weight: 500;
+  font-size: initial;
+  width: fit-content;
+  margin: 0 auto;
 }

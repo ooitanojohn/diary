@@ -22,7 +22,7 @@ type PageProps = { // PagePropsの型情報
     totalCount: number
 }
 
-const PER_PAGE = 5;
+const PER_PAGE = 10;
 export const getStaticPaths: GetStaticPaths<PathParams> = async () => {
   const all = await getAllGitRepoData() // 全件数を取る
   const totalPage:number = Object.keys(all.data).length
