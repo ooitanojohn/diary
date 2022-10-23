@@ -10,15 +10,15 @@ function Header() {
     <header className={styles.container} >
         <div className={styles.d_flex}> 
           <h1 className='display-none'>ooitanojohn is blog</h1> 
-          <li><Image src={profileImg} alt="turtle_icon" height={64} width={64}></Image></li>
-          <li>BIG LOVE...♡</li>
+          <p><Image src={profileImg} alt="turtle_icon" height={64} width={64}></Image></p>
+          <p className={styles.comment}>BIG LOVE...♡</p>
         </div>
         <ul className={styles.d_flex}>
           <li><Link href="/"><a>home</a></Link></li>
           <li><Link href="/readme"><a>readme</a></Link></li>
           <li><Link href="/repos/1"><a>repos</a></Link></li>
-          <li><Image src={turtleImg} alt="turtle_icon" height={32} width={32}></Image></li>
-          <li>click to nav..</li>
+          <li><p><Image src={turtleImg} alt="turtle_icon" height={32} width={32}></Image></p></li>
+          <li><p className={styles.comment}> click to nav..</p> </li>
         </ul>
     </header>
   )

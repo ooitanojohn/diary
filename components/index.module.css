@@ -1,0 +1,28 @@
+/* スクリーンサイズが767px以下の場合に適用 */
+@media screen and (max-width: 767px) {
+  .block {
+    display: block;
+  }
+}
+
+/* PC */
+.title {
+  font-size: medium;
+  font-weight: 500;
+  color: thistle;
+  font-family: fantasy;
+}
+.tag {
+  display: flex;
+  justify-content: space-between;
+}
+.date {
+  font-size: smaller;
+  font-family: fantasy;
+  color: slategray;
+}
+.genre {
+  font-size: smaller;
+  font-family: fantasy;
+  color: slategray;
+}

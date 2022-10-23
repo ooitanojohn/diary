@@ -15,6 +15,7 @@ span.tag {
   font-style: italic;
   font-weight: 500;
   color: darkcyan;
+  padding-right: 5px;
 }
 .visiually-hidden {
   clip: rect(1px, 1px, 1px, 1px);

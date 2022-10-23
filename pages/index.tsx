@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import Link from 'next/link'
+import styles from '../components/index.module.css'
 import Header from '../components/header'
 import Aside from '../components/aside'
 import Footer from "../components/footer"
@@ -20,8 +21,8 @@ export default function Index({ allPostsData }:{
     <>
       {/* {console.log(allPostsData)} */}
       <Head>
-        <title>ooitanojohn</title> {/*title*/}
-        <link rel="icon" href="/favicon.ico" /> {/* icon */}
+        <title>ooitanojohn</title> 
+        <link rel="icon" href="/favicon.ico" /> 
       </Head>
       <div className="display">
       <div style={{ display:"flex" }}> 
@@ -30,20 +31,27 @@ export default function Index({ allPostsData }:{
         <main>
          <article>
           <h2 className="visiually-hidden">記事一覧</h2>
-          <ul>
+         <form method="post">
+          <input type="text" placeholder="検索予定404 " ></input> 
+         </form>
+         <ul>
            {allPostsData.map(({ id, date, title, description, tag, author }) => (
            <li key={id}>
             <Link href={`/posts/${id}`}><a>
-                {id} - {date} / {tag}
-                <span> [{title}]  {description}</span>
-            </a></Link>
+              <span className={styles.block}>
+                <span className={styles.title}>{title}</span>
+              </span>
+             <div className={styles.tag}>
+              <span className={styles.genre}>{tag}</span> <span className={styles.date}>{date}</span>
+              </div>
+             <span className={styles.block}>{description}</span>
+             </a></Link>
            </li>
           ))}
           </ul>
          </article>
         </main>
        </div>
-       <Aside></Aside>
       </div>
       <Footer></Footer>
       </div>

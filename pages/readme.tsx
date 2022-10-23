@@ -21,8 +21,10 @@ export default function Readme({ profile }: {
         <title>profile</title>
         <link rel="icon" href="/favicon.ico" /> {/* icon */}
       </Head>
+      <div className="display">
       <Header></Header>
       <main>
+        <article>
         <h2>Profile</h2>
            <ul>
             <li><span className="tag">Hi!♡</span><Image src={handImg} alt="hande_icon" height={32} width={32}></Image>
@@ -35,8 +37,10 @@ my name is {profile.login}</li>
             <li><span className="tag">techlike:</span>PHP,next.js,bash</li>
             <li><span className="tag">hobby:</span>cute,music(keyboard),art</li>
           </ul>
+       </article>
       </main>
       <Footer></Footer>
+      </div>
     </>
   )
 }

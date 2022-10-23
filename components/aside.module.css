@@ -1,9 +1,11 @@
 /* phone */
-.d_flex {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  list-style: none;
+.bgImg {
+  height: 85vh;
+}
+.asideBg {
+  position: relative;
+  height: 80vh;
+  width: auto;
 }
 
 /* tab */

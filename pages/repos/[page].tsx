@@ -58,6 +58,7 @@ const Works: NextPage<PageProps> = ({ repositories,totalCount }) => {
         <title>create</title>
         <link rel="icon" href="/favicon.ico" /> {/* icon */}
       </Head>
+      <div className="display">
       <Header></Header>
       <main>
         <h1>create</h1>
@@ -74,6 +75,7 @@ const Works: NextPage<PageProps> = ({ repositories,totalCount }) => {
         <Pagination totalCount={totalCount} DIR='/repos/'/>
       </main>
       <Footer></Footer>
+      </div>
     </>
   )
 }

@@ -1,11 +1,18 @@
 /* phone */
+/* スクリーンサイズが767px以下の場合に適用 */
+@media screen and (max-width: 767px) {
+}
+
+/* tab */
+
+/* pc */
+
+.comment {
+  color: thistle;
+}
 .d_flex {
   display: flex;
   align-items: center;
   gap: 10px;
   list-style: none;
 }
-
-/* tab */
-
-/* pc */
