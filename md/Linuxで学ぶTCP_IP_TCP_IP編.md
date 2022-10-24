@@ -1,7 +1,7 @@
 ---
 title: Linuxで学ぶTCP_IP
 date: 2022/10/22
-description: ２章 TCP/IPの途中
+description: 1章 概要
 tag: linux tcp/ip
 author: ooitanojohn
 ---
