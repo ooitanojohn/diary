@@ -43,17 +43,36 @@ const Post: NextPage<PageProps> = ({ // 記事用レイアウト
         <title>{postData.title}</title>
         <link rel="icon" href="/favicon.ico" /> {/* icon */}
       </Head>
+      <div className="display">
       <Header></Header>
       <main>
         <PostLayout>
-          <p>{postData.title}</p>
-          <p>{postData.date}</p>
-          <p>{postData.description}</p>
-          <p>{postData.tag}</p>
+        <article>
+          <section>
+          <h3 className="visiually-hidden">記事タイトル</h3>
+            <div className="title-rayout">
+              <h2>{postData.title} : </h2>
+              <p>{postData.description}</p>
+            </div>
+            <div className="title-rayout" >
+              <p>date:{postData.date}</p>
+              <p>tag:{postData.tag}</p>
+            </div>
+          </section>
           <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
+          <style jsx>{`
+            .title-rayout{
+              display:flex;
+              justify-content:space-between;
+            }
+            section{
+              padding-bottom:50px;
+          `}</style>
+        </article>
         </PostLayout>
       </main>
       <Footer></Footer>
+      </div>
     </>
   )
 }

@@ -6,7 +6,9 @@
 /* tab */
 
 /* pc */
-
+.headerImg {
+  border-radius: 50px;
+}
 .comment {
   color: thistle;
 }

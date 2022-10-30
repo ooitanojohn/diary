@@ -30,10 +30,7 @@ export default function Index({ allPostsData }:{
         <Header></Header>
         <main>
          <article>
-          <h2 className="visiually-hidden">記事一覧</h2>
-         <form method="post">
-          <input type="text" placeholder="検索予定404 " ></input> 
-         </form>
+          <h2 className="visiually-hidden">記事一覧</h2> 
          <ul>
            {allPostsData.map(({ id, date, title, description, tag, author }) => (
            <li key={id}>
