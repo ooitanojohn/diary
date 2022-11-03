@@ -1,2 +1,12 @@
 package.json
 package-lock.json
+.git
+.husky
+.next
+.vscode
+md/
+node_modules/
+.env.local
+.eslintrc.json
+README.md
+

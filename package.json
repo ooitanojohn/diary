@@ -5,7 +5,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
+    "lint": "prettier --check 'pages/**/*.tsx' 'styles/*.css' 'components/*",
+    "format": "prettier --write 'pages/**/*.tsx' 'styles/*.css' 'components/*' ",
     "prepare": "husky install"
   },
   "dependencies": {
